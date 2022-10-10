@@ -4,84 +4,194 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achala Imesh Official</title>
     <link rel="stylesheet" href="mystylesheet.css">
-    <title> Achala Imesh Offial</title>
+    <script type="module">
+                // Import the functions you need from the SDKs you need
+                import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+        import { getDatabase, set, ref} from "https://www.gstatic.com/firebasejs/9.10.0/firebase-database.js";
 
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBxF75_tSMZrwdkz_IFRqQYVmo6NWHL7g0",
+            authDomain: "myfirebase-b5752.firebaseapp.com",
+            databaseURL: "https://myfirebase-b5752-default-rtdb.asia-southeast1.firebasedatabase.app",
+            projectId: "myfirebase-b5752",
+            storageBucket: "myfirebase-b5752.appspot.com",
+            messagingSenderId: "554970119205",
+            appId: "1:554970119205:web:c05a390781a912fc6f13cc"
+            };
+        
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        
+        document.getElementById("userform").addEventListener("submit", function(e){
+            e.preventDefault();
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let subject = document.getElementById("subject").value;
+            let message = document.getElementById("message").value;
+
+            set(ref(db, 'users/' + name), {
+                username: name,
+                email: email,
+                phone: phone,
+                subject: subject,
+                message: message,
+        });
+    });
+    </script>
+    <script src="https://kit.fontawesome.com/b20d32b5be.js" crossorigin="anonymous"></script>
+    
 </head>
-<header>
-
- 
-<div class="header">
-    <img class="logo" src="achala.png"> <img class="logo" src="achala1.png"><img class="logo" src="achala.png"><img class="logo" src="achala1.png"><img class="logo" src="achala.png"><img class="logo" src="achala1.png"><img class="logo" src="achala.png"><img class="logo" src="achala1.png"><img class="logo" src="achala.png">
-    <div class="header-right">
-      <a class="active" href="#home">Home</a>
-      <a href="#exp">Experience</a>
-      <a href="#edu">Education</a>
-      <a href="#client">Skill</a>
-      <a href="#skill">Contact</a>
-      <a href="#contact">About</a>
-    </div>
-  </div>
-</header>
-
 
 <body>
-  <div class="flex-container">
-    <div class="cont1"> 
-      <div class="word">
-        <div class="wordc1"> <span style="color:gold; font-size: 35px; font-family:Verdana, Geneva, Tahoma, sans-serif;"> Hey, I'm</span><br> 
-            <span style="color: white; font-size: 70px; font-weight: bold; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> Achala Imesh</span><br>
-            <span style="color: white; font-size: 18px; font-style:tahoma;"> ... Apprentice Pharmacist / University Student ... </span></div>
-        </div>
-    </div>
-
-  <div class="cont2">
-    <img src="D15.jpeg" height="auto" width="300px">
-    </div>
     
-  </div>
+    <div class="hero">
+        <nav>
+            <img src="achala.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#service">Service</a></li>
+                <li><a href="#edu">Education</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="mailto:achalaimesh99@gmail.com" class="btn">Hire me</a>
+        </nav>
+    
 
-  <div class=" about">
-    <h2 style="font-weight: bold;font-family: 'Times New Roman', Times, serif; font-size:28px; color: rgba(63, 63, 183, 0.61);text-align: center;"> <u>
-      About Me </u></h2>
+    <div class="info">
+        <h1>Hey, I'm <span> Achala Imesh</span></h1>
+        <h1>I'm a Apprentice Pharmacist & <br>University Student</h1>
+        <p>Welcome to my official website...</p>
+        <a href="cv.pdf" class="btn">Download CV</a>
+    </div>
 
-      <p style="text-align:center ; font-size: 19px; font-family: 'Courier New', Courier, monospace;"> 
-       Currently I'm a student at University of Moratuwa. <br>
-       And also I'm a SLMC Registered Apprentice Pharmacist. <br>
-       I work part-time as an Assistant Pharmacist at Hemas Capital Hospital, Thalawathugoda.<br> 
-       I want to combine the Pharmacy Field & IT Field and do something new.<br><br>
+    <div class="img-box">
+        <img src="backg4.png" class="back-img">
+        <img src="mypic.png" class="man-img">
+    </div>
+
+    <div class="social">
+        <a href="https://www.facebook.com/achalaimesh.batuwangala.5"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://youtube.com/channel/UCriGEy0k-BtirvR0gZ5OXOQ"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/in/achala-imesh-batuwangala-22b241253/"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/qr/CFFEFYQRLI4ZJ1"><i class="fa-brands fa-square-whatsapp"></i></a>
+    </div>
+
+    <div class="skill" id="skill">
+        <h2> My Skill</h2>
+
+        <li>
+            <h3>HTML</h3>
+            <span class="bar"> <span class="html"> </span></span>
+        </li>
+        <li>
+            <h3>CSS</h3>
+            <span class="bar"> <span class="css"> </span></span>
+        </li>
+        <li>
+            <h3>JAVASCRIPT</h3>
+            <span class="bar"> <span class="js"> </span></span>
+        </li>
+
+    </div>
+
+    <div class="about" id="about">
+        <h2> About Me </h2>
+    
+          <p>
+           Currently I'm a student at University of Moratuwa. <br>
+           And also I'm a SLMC Registered Apprentice Pharmacist. <br>
+           I work part-time as an Assistant Pharmacist at Hemas Capital Hospital, Thalawathugoda.<br> 
+           I want to combine the Pharmacy Field & IT Field and do something new.<br><br>
+          
+          <span style="font-weight: bold; color: gray; font-family: 'Times New Roman', Times, serifs;">I believe my self. I know, I can contribute to change Pharmacy Field with IT..... </span>     
+    
+          </p>
+    
+      </div>
       
-      <b>I believe my self. I know, I can contribute to change Pharmacy Field with IT..... </b>     
+      <div class="container" id="contact">
+        <h2> Connect with me</h2>
+      <div class="contact-box">
+            <div class="contact-left">
+                <h3>Send your request</h3>
+                <form method="post" id="userform">
+                     <div class="input-row">
+                       <div class="input-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Kasun Perera">
+                        </div>
 
-      </p>
+                        <div class="input-group">
+                            <label for="phone">Phone</label>
+                            <input type="text" id="phone" placeholder="+94771234567">
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-group">
+                             <label for="email">Email</label>
+                             <input type="email" id="email" placeholder="kasun.perera@gmail.com">
+                         </div>
+ 
+                         <div class="input-group">
+                             <label for="subject">Subject</label>
+                             <input type="text" id="subject" placeholder="Product Demo">
+                         </div>
+                     </div>
+
+                     <label for="message">Message</label>
+                     <textarea id="message" rows="5" placeholder="Your message"></textarea>
+                     <input type="submit" class="sub">
+                </form>
+            </div>
+            <div class="contact-right">
+                <h3>Reach Me</h3>
+                <table>
+                    <tr>
+                        <td><i class="fa-solid fa-at"></i> Email</td>
+                        <td>achalaimesh99@gmail.com</td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td><i class="fa-solid fa-phone"></i> Phone</td>
+                        <td>+94771773680</td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td><i class="fa-solid fa-location-dot"></i> Address</td>
+                        <td>No 44/1, Duwawatta, <br>Wathugedara,<br>
+                             Ambalangoda <br> 80300</td>
+                    </tr>
+                </table>
+
+            </div>
+
+      </div>
 
   </div>
-
-
-  <div class="contact-me">
-    <h3 style="font-weight: bold;font-family: 'Times New Roman', Times, serif; font-size:28px; color: rgba(63, 63, 183, 0.61);text-align: center;" ><u> Contact Me </u></h3 >
-  <div class="S-logos">
-    <a href="https://www.facebook.com/achalaimesh.batuwangala.5"> <img src="fb.jpg" height="auto" width="74px"> </a>
-    <a href="https://wa.me/qr/CFFEFYQRLI4ZJ1"> <img src="wp.jpg" height="auto" width="74px"> </a>
-    <a href="https://youtube.com/channel/UCriGEy0k-BtirvR0gZ5OXOQ"> <img src="yt.jpg" height="auto" width="74px"> </a>
-    <a href="mailto:achalaimesh99@gmail.com"> <img src="gm.png" height="auto" width="71px"> </a>
-
-
+  <div class="footer">
+    <p>Copyright © AcHa 2022. All rights reserved.</p>
 
   </div>
-
-  </div>
-
-      
-
-
-
+</div>
 
 </body>
 
-<footer>
-  <h4> Copyright © AcHa 2022. All rights reserved.</h4>
-
-</footer>
-  
 </html>
